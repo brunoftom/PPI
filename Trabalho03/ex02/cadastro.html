@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Clínica ABC Health</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Clínica ABC Health</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Cadastro</h2>
+            <form action="cadastraCliente.php" enctype="multipart/form-data" method="post">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <p><label>Nome: <input type="text" name="nome" placeholder="Nome Completo" minlength="2"
+                                maxlength="50" required autofocus></label></p>
+                    <p><label>Email: <input type="email" name="email" required></label><span></span></p>
+                    <p><label>CPF: <input type="text" id="dpCPF" name="dpCPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                                placeholder="xxx.xxx.xxx-xx" required><span></span></label></p>
+                    <p><label>Idade: <input type="number" name="idade" required></label></p>
+                    <p><label>Telefone: <input type="tel" name="telefone" required><span></span></label></p>
+                    <p><label>Data de Nascimento: <input type="date" name="data_nascimento"><span></span></label></p>
+                    <fieldset>Sexo:
+                        <div><label><input type="radio" id="masc" name="sexo" value="masc">Masculino</label></div>
+                        <div><label><input type="radio" id="fem" name="sexo" value="fem">Feminino</label></div>
+                    </fieldset>
+                    <fieldset>Estado Civil:
+                        <div><label><input type="radio" name="estado_civil" value="Solteiro">Solteiro</label></div>
+                        <div><label><input type="radio" name="estado_civil" value="Casado">Casado</label></div>
+                        <div><label><input type="radio" name="estado_civil" value="União_estavel">União Estavel</label>
+                        </div>
+                    </fieldset>
+                    <textarea id="Nacionalidade" name="Nacionalidade" readonly>Brasileiro</textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Endereço de Entrega</legend>
+                    <p><label>CEP: <input type="text" name="cep" pattern="\d{5}-\d{3}" required><span></span></label>
+                    </p>
+                    <p><label>Tipo de Logradouro:
+                            <select name="tipo_logradouro" required>
+                                <option value="">Selecione</option>
+                                <option value="Rua">Rua</option>
+                                <option value="Avenida">Avenida</option>
+                                <option value="Praça">Praça</option>
+                            </select></label></p>
+                    <p><label>Logradouro: <input type="text" name="Logradouro" required></label></p>
+                    <p><label>Bairro: <input type="text" name="bairro" required></label></p>
+                    <p><label>Cidade: <input type="text" name="cidade" required></label></p>
+                    <p><label>Estado: <input type="text" name="estado" required></label></p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações Adicionais</legend>
+                    <p><label>Quais são seus interesses: </label>
+                        <label><input type="checkbox" name="interesses" value="filmes">Filmes</label>
+                        <label><input type="checkbox" name="interesses" value="informática">Informática</label>
+                        <label><input type="checkbox" name="interesses" value="games">Games</label>
+                        <label><input type="checkbox" name="interesses" value="livros">Livros</label>
+                        <label><input type="checkbox" name="interesses" value="roupas">Roupas</label>
+                        <label><input type="checkbox" name="interesses" value="outros">Outros</label>
+                    </p>
+
+                    <p>Informe os outros interesses:</p>
+                    <p><textarea name="informacoes_adicionais" id="info"></textarea></p>
+
+                    <p>Insira um arquivo:
+                        <input type="file" name="arquivo">
+                    </p>
+                    <p><input type="hidden" name="Informações" value="Relevantes ou não"></p>
+
+                </fieldset>
+                <p><button type="submit">Cadastrar</button></p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><i>Av. João Naves de Ávila, Santa Mônica, Uberlândia</i></p>
+    </footer>
+
+</body>
+
+</html>
