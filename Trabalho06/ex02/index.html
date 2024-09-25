@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stysheet" href="style.css">
+    <title>Trabalho 06 - Exercicio 02</title>
+</head>
+<body>
+    <input type="text" name="name">
+    <button type="button">Digite seu nome e clique aqui</button>
+    <p></p>
+
+    <script>
+        const botao = document.querySelector("button");
+        botao.onclick = function (){
+            const campoNome = document.querySelector("input");
+            const parSaida = document.querySelector("p");
+            parSaida.textContent = 'Obrigado, ' + campoNome.value;
+        };
+    </script>
+
+    <img src="images/ex02.jpg" title="ex-02">
+</body>
+</html>

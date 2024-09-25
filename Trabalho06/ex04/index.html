@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Trabalho 06 - Exercicio 04</title>
+    <link rel="stysheet" href="style.css">
+</head>
+<body>
+    <p> O código  selecionando o elemento pre com o id="output" para exibir o
+        conteúdo gerado. Em seguida, ele itera sobre todos os nós filhos do elemento body, que incluem
+        textos (espaços em branco e quebras de linha), elementos HTML como h2, input, pre, e também comentários.
+        Para cada nó, o código exibe o protótipo do construtor, resultando em saídas
+        como [object Text] para nós de texto, [object HTMLHeadingElement] para o título h2, [objectHTMLInputElement]
+        para o campo de entrada input, e assim por diante, incluindo [object Comment] 
+        para o comentário e [object HTMLPreElement] para o próprio pre.</p>
+    
+    <p>
+        Depois disso, o código realiza uma série de verificações para determinar se o elemento input (selecionado previamente com 
+        document.querySelector("#myInput")) é instância de diferentes classes, como HTMLInputElement, HTMLElement, Element, Node e EventTarget. 
+        Todas essas verificações retornam true, já que input é, de fato, um elemento HTML e herda de todas essas classes.
+    </p>
+
+    <p>
+        Por fim, o código exibe o protótipo do objeto document, que é um HTMLDocument. A saída completa, portanto, inclui a lista dos protótipos dos nós filhos do corpo da página, 
+         seguida de cinco valores true para as verificações de instância do elemento input, e termina com o protótipo do document.
+    </p>
+
+</body>
+</html>
